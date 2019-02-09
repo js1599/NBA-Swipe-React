@@ -15,6 +15,7 @@ class App extends Component {
         <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/ChosenCard/getMatchup" component={Card} />
+        <Route exact path="/UserProfile" component={UserProfile} />
       </Switch>
         </header>
       </div>
