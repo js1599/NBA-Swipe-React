@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import anthony from '/anthony.png'
 import UserProfile from '../UserProfile';
 const data = [
     {"STL%": "2.2", "blank2": "", "TS%": "0.368", "FT": "23", "3P": "0", "BPM": "-7.7", "PER": "5.5", "blanl": "", "Tm": "LAC", "WS": "-0.5", "FG": "29", "3PA": "0", "DRB": "51", "ORB%": "6.6", "OBPM": "-7.5", "DBPM": "-0.2", "FT%": "0.719", "BLK%": "2.7", "3PAr": "0", "PF": "62", "PTS": "81", "FGA": "96", "OWS": "-0.7", "DWS": "0.2", "VORP": "-0.5", "2P": "29", "G": "49", "STL": "16", "TOV": "24", "Age": "30", "TRB": "74", "TOV%": "17.9", "AST%": "4.5", "FTA": "32", "eFG%": "0.302", "BLK": "15", "TRB%": "10.9", "FG%": "0.302", "2PA": "96", "FTr": "0.333", "WS/48": "-0.065", "USG%": "15.8", "DRB%": "15.6", "AST": "11", "Pos": "PF", "Player": "Rajon Rando", "2P%": "0.302", "MP": "377", "Year": "2000", "GS": "3", "_id": {"$oid": "5c5f299dc8c9e50b2d2423af"}, "ORB": "23", "3P%": ""},
@@ -36,7 +37,8 @@ export default class Card extends Component {
         render() {
             return (
                 <>
-                <div class="PlayerInfo" style={background}>
+                <div class="PlayerInfo" >
+                <img src= {require("./icon.png")} alt=""/>
                     <h4 id='name'> Player Name: {data[this.getRandomInt(4)].Player}</h4>
                     <h4 id='shot-percent'>Goal Average: {data[this.getRandomInt(4)].FT}</h4>
                     <h4 id='position'>Position: {data[this.getRandomInt(4)].Pos}</h4>
@@ -49,7 +51,9 @@ export default class Card extends Component {
                 <br />
                 <br />
                 <br />
-                <div class="PlayerInfo" style={background}>
+                <div class="PlayerInfo" >
+                <img src= {require("./icon.png")} alt=""/>
+                 
                     <h4 id='name'> Player Name: {fakeData[this.getRandomInt(4)].name}</h4>
                     <h4 id='shot-percent'>Goal Average {fakeData[this.getRandomInt(4)].FT}</h4>
                     <h4 id='position'>Position: {fakeData[this.getRandomInt(4)].POS} </h4>
@@ -69,3 +73,4 @@ export default class Card extends Component {
 }
 
 const background = {background: '#282c34', height: '100%', width: '100%'}
+
